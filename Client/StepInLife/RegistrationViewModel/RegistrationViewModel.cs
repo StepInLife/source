@@ -15,11 +15,12 @@ namespace Modes
 
     public class RegistrationViewModel: BindableBase, System.ComponentModel.IDataErrorInfo
     {
+        private RegModel model;
+
         public RegistrationViewModel()
         {
             model = new RegModel();
         }
-        private RegModel model;
         
         public RegModel RegistrationForm
         {
