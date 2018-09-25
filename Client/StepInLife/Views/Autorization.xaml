@@ -1,0 +1,32 @@
+﻿<Window x:Class="StepInLife.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StepInLife"
+        mc:Ignorable="d"
+        Title="StepInLIfe" Height="400" Width="400" FontFamily="MV Boli" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,4.2,1">
+        <Label x:Name="label" Content="StepInLife" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="83,19,0,0" FontFamily="MV Boli" FontSize="48"/>
+        <TextBox x:Name="Email_txtbox" HorizontalAlignment="Left" Height="23" Margin="131,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202">
+            <Binding Path="Email">
+                <Binding.ValidationRules>
+                    <ExceptionValidationRule />
+                </Binding.ValidationRules>
+            </Binding>
+        </TextBox>
+        <TextBox x:Name="Password_txtbox" HorizontalAlignment="Left" Height="23" Margin="131,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202">
+            <Binding Path="Password">
+                <Binding.ValidationRules>
+                    <ExceptionValidationRule />
+                </Binding.ValidationRules>
+            </Binding>
+        </TextBox>
+
+        <Label x:Name="Password_lbl" Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,204,0,0" FontFamily="MV Boli" FontSize="18" Height="37" Width="96" RenderTransformOrigin="0.358,0.917"/>
+        <Button x:Name="Registration_butt" Click="Registration_butt_Click" Content="Registration" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Margin="83,284,0,0" Height="24" RenderTransformOrigin="0.357,0.229" FontFamily="MV Boli"/>
+        <Button x:Name="Enter_butt" Content="Enter" HorizontalAlignment="Left" Margin="266,284,0,0" VerticalAlignment="Top" Width="84"/>
+        <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,142,0,0" Width="86" FontSize="18"/>
+
+    </Grid>
+</Window>
