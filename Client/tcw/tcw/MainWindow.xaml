@@ -1,0 +1,163 @@
+﻿<Window x:Class="tcw.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tcw"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!--Вкладки(табконтрол)-->
+        <TabControl x:Name="tabControl" TabStripPlacement="Left" Height="400" Margin="0,10,9.6,0" VerticalAlignment="Top" RenderTransformOrigin="0.493,0.494" HorizontalAlignment="Right" Width="774" >
+            <!--Вкладка профиля-->
+            <TabItem Header="Profil" Margin="0,217,0,-221" HorizontalAlignment="Left" Width="311"  >
+                <Grid Background="#FFE5E5E5" Margin="0,0,0.4,0.4">
+                    <ListView x:Name="listView_profile" HorizontalAlignment="Left" Height="350" Margin="10,34,0,0" VerticalAlignment="Top" Width="435">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button x:Name="add_post" Content="+Add" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
+                </Grid>
+            </TabItem>
+
+            <!--Вкладка сообщений-->
+            <TabItem Header="Messages" Margin="0,226,-1,-230">
+                <Grid Background="#FFE5E5E5">
+                    <ListView x:Name="listView_mess" HorizontalAlignment="Left" Height="357" Margin="10,30,0,0" VerticalAlignment="Top" Width="435" Panel.ZIndex="0">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <ListView x:Name="listView_people" HorizontalAlignment="Right" Height="357" Margin="0,30,10.2,0" VerticalAlignment="Top" Width="435" Panel.ZIndex="1">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn>
+                                    <StackPanel Orientation="Horizontal" Width="433">
+                                        <Button x:Name="icon_mess"  Height="50" Width="50">
+                                            <Button.Clip>
+                                                <EllipseGeometry Center="25, 25" RadiusX="24" RadiusY="24" >
+                                                </EllipseGeometry>
+                                            </Button.Clip>
+                                        </Button>
+                                        <StackPanel Height="50" Width="377">
+                                            <Label x:Name="name_mess" Height="25" FontSize="10" Margin="0,0,176,0">Name</Label>
+                                            <Label x:Name="lastMessage_mess"  Margin="0,0,0.2,0">last message</Label>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </GridViewColumn>
+                            </GridView>
+
+                        </ListView.View>
+                    </ListView>
+                    <Button x:Name="add_mess" Content="+" HorizontalAlignment="Left" Margin="417,2,0,0" VerticalAlignment="Top" Width="28" Height="23"/>
+                    <TextBox x:Name="Search_Mess" HorizontalAlignment="Left" Height="23" Margin="10,2,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="402" />
+
+                </Grid>
+            </TabItem>
+            <!--Вкладка каналов-->
+            <TabItem Header="Chanels" Margin="0,235,-1,-239">
+                <Grid Background="#FFE5E5E5">
+                    <ListView x:Name="listView_chanel" HorizontalAlignment="Left" Height="357" Margin="10,30,0,0" VerticalAlignment="Top" Width="435" Panel.ZIndex="0">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <ListView x:Name="listView_chanel_list" HorizontalAlignment="Left" Height="357" Margin="10,30,0,0" VerticalAlignment="Top" Width="435" Panel.ZIndex="1">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn>
+                                    <StackPanel Orientation="Horizontal" Width="433">
+                                        <Button x:Name="icon_chanel" Height="50" Width="50">
+                                            <Button.Clip>
+                                                <EllipseGeometry Center="25, 25" RadiusX="24" RadiusY="24" >
+                                                </EllipseGeometry>
+                                            </Button.Clip>
+                                        </Button>
+                                        <StackPanel Height="50" Width="377">
+                                            <Label x:Name="name_chanel" Height="25" FontSize="10" Margin="0,0,176,0">Name of chanel</Label>
+                                            <Label x:Name="lastMessage_chanel" Margin="0,0,0.2,0">last message</Label>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button x:Name="add_chanels" Content="+" HorizontalAlignment="Left" Margin="417,2,0,0" VerticalAlignment="Top" Width="28" Height="23"/>
+                    <TextBox x:Name="Search_chanels" HorizontalAlignment="Left" Height="23" Margin="10,2,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="402" />
+
+                </Grid>
+            </TabItem>
+            <!--Вкладка новостей-->
+            <TabItem Header="News" Margin="0,245,-1,-249">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <!--Вкладка друзей-->
+            <TabItem Header="Friends" Margin="0,254,-1,-258">
+                <Grid Background="#FFE5E5E5">
+                    <ListView x:Name="listView_friends" HorizontalAlignment="Left" Height="357" Margin="10,30,0,0" VerticalAlignment="Top" Width="435">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="icon_friends" Height="50" Width="50">
+                                            <Button.Clip>
+                                                <EllipseGeometry Center="25, 25" RadiusX="24" RadiusY="24" >
+                                                </EllipseGeometry>
+                                            </Button.Clip>
+                                        </Button>
+                                        <StackPanel Height="50" Width="219">
+                                            <Label x:Name="name_friends" Height="25" FontSize="9" Margin="0,0,176,0">Name</Label>
+                                            <Button x:Name="write_friends" Height="25" FontSize="9" HorizontalAlignment="Left" Width="90" Content="write" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                        <Label x:Name="specialization_friends" Width="158">Spezialization</Label>
+                                    </StackPanel>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button x:Name="add_friends" Content="+" HorizontalAlignment="Left" Margin="417,2,0,0" VerticalAlignment="Top" Width="28" Height="23"/>
+                    <TextBox x:Name="Search_friends" HorizontalAlignment="Left" Height="23" Margin="10,2,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="221" />
+                    <ComboBox x:Name="comboBoxSpecialization_friends" HorizontalAlignment="Left" Margin="236,2,0,0" VerticalAlignment="Top" Width="176" Height="23">
+                        <ComboBoxItem Content="Programer"/>
+                        <ComboBoxItem Content="Designer"/>
+                    </ComboBox>
+
+                </Grid>
+            </TabItem>
+            <!--Вкладка настроек-->
+            <TabItem Header="Settings" Margin="0,265,0,-270">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+        </TabControl>
+
+
+
+        <!--Картинка-->
+
+        <Image x:Name="main_image" Width="150" Height="150" Margin="14,14,629.6,256" Panel.ZIndex="1" >
+            <Image.Clip>
+                <EllipseGeometry Center="47, 47" RadiusX="47" RadiusY="47">
+                </EllipseGeometry>
+            </Image.Clip>
+        </Image>
+
+        <!--Имя, Фамилия, год рождения-->
+        <Label x:Name="main_Name" Panel.ZIndex="1" Content="Василий" HorizontalAlignment="Left" Margin="214,14,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="main_Surname" Panel.ZIndex="1" Content="Миргородский" HorizontalAlignment="Left" Margin="200,40,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="main_date" Panel.ZIndex="1" Content="25.02.2000" HorizontalAlignment="Left" Margin="211,68,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="main_Specialization" Panel.ZIndex="1" Content="Программист" HorizontalAlignment="Left" Margin="203,96,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Change_info" Content="Change information" HorizontalAlignment="Left" Margin="184,169,0,0" VerticalAlignment="Top" Width="125" Panel.ZIndex="1"/>
+        <Button x:Name="Change_photo" Content="Change photo" HorizontalAlignment="Left" Margin="14,169,0,0" VerticalAlignment="Top" Width="97" Panel.ZIndex="1"/>
+
+
+    </Grid>
+
+</Window>
