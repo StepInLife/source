@@ -5,3 +5,9 @@ Client/.vs/
 /Service/Service/bin/Debug
 /Service/Service/obj/Debug
 /Service/Client/obj/Debug
+/.vs
+/Service/Client/bin/Debug
+/Service/Client/obj/Release
+/Service/Service/obj/Release
+/Service/ServiceClient/obj/Debug
+/Service/ServiceClient.Interfaces/obj/Debug
