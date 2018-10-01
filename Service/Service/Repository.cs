@@ -18,7 +18,7 @@ namespace Service
         }
         public RegistrationErrors InsertCheck(string name, string surname, DateTime birthday, string specialization, string email, string password, string city)
         {
-            var emailCheck = from person in context.Users where person.Email == email select new BusinessUser
+            var emailCheck = (from person in context.Users where person.Email == email select new BusinessUser
             {
                 Name = person.Name,
                 Surname = person.Surname,
@@ -27,7 +27,7 @@ namespace Service
                 Email = person.Email,
                 Password = person.UserPassword,
                 City = person.City
-            };
+            }).FirstOrDefault();
             int strengthCheck = password.Length;
 
             if (emailCheck == null && strengthCheck > 8)
