@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="RegistrationErrors">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="EmailError" />
+      <xs:enumeration value="PasswordStrength" />
+      <xs:enumeration value="UnknownError" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RegistrationErrors" nillable="true" type="tns:RegistrationErrors" />
+</xs:schema>

@@ -1,2 +1,7 @@
 Client/.vs/
 /Client/StepInLife/obj
+/Service/.vs/Service
+/Service/packages/EntityFramework.6.1.3
+/Service/Service/bin/Debug
+/Service/Service/obj/Debug
+/Service/Client/obj/Debug
